@@ -13,6 +13,13 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
+if [ ! -f "$DATA_FILE" ]; then
+  echo "No data file found. Attempting to download..."
+  if ! ./get-covid-data.sh; then
+    echo "ERROR: Could not download the requried data file. Exiting..."
+    exit 1
+  fi
+fi
 
 getDeathsByDate "$1" "$2"
 
