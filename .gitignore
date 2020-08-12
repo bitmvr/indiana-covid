@@ -1,0 +1,6 @@
+# Project Specific
+daily.json
+
+# macOS Specific
+.DS_Store
+
