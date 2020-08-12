@@ -2,7 +2,7 @@
 
 source ./covid.conf
 
-getDeathsByDate(){
+getCasesByDate(){
   local county="$1"
   local date="$2"
   jq ".objects.cb_2015_indiana_county_20m.geometries[].properties | select(.NAME==\"${county}\") | .VIZ_DATE[] | select(.DATE==\"${date}\") | .COVID_COUNT" "$DATA_FILE"
@@ -21,5 +21,5 @@ if [ ! -f "$DATA_FILE" ]; then
   fi
 fi
 
-getDeathsByDate "$1" "$2"
+getCasesByDate "$1" "$2"
 

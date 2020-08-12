@@ -6,7 +6,7 @@ A collection of Bash scripts to allow analysis of Indiana's official COVID stati
 
 Below is some examples using the scripts below.
 
-**Deaths in County on a given date.**
+**Cases in County on a given date.**
 
 This command requires 2 positional parameters.
 
@@ -14,7 +14,7 @@ This command requires 2 positional parameters.
 2. The date formatted as YYYY-MM-DD
 
 ```
-bash ./get-county-deaths-by-date.sh Marion 2020-07-04
+bash ./get-county-cases-by-date.sh Marion 2020-07-04
 ```
 
 **Deaths in County for the last X amount of days.**

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ./covid.conf
+
 readonly COUNTY_NAME="$1"
 readonly DAYS_AGO="$2"
 
@@ -29,7 +31,7 @@ main(){
   county_name="$COUNTY_NAME"
  
   until [ "$i_date" == "$todays_date"  ]; do
-    covid_count="$(./get-county-deaths-by-date.sh "$county_name" "$i_date")"
+    covid_count="$(./get-county-cases-by-date.sh "$county_name" "$i_date")"
     echo "${county_name},${i_date},${covid_count}"
     i_date="$(_increase_date "$i_date")"
   done
