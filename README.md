@@ -2,6 +2,10 @@
 
 A collection of Bash scripts to allow analysis of Indiana's official COVID statistics.
 
+## Dependencies
+
+- jq
+
 ## Usage
 
 Below is some examples using the scripts below.
